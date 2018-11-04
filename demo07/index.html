@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1>动态 css class</h1>
+
+        <h2 v-bind:class="{red:true, green:true}">实例 1</h2>
+        <!-- <p v-on:click="{changeColor=!changeColor}" 
+        v-bind:class="{changeColor: changeColor}">
+            <span>Hello World</span>
+        </p> -->
+
+        <h2>实例 2</h2>
+        <button v-on:click="changeColor=!changeColor">changeColor</button>
+        <button v-on:click="changeLength=!changeLength">changeLength</button>
+        <div v-bind:class="compClass">
+            <span>Hello World</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

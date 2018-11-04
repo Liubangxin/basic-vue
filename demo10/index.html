@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1>v-for</h1>
+        <template v-for='c in characters'>
+            {{c}}            
+            <!-- {{characters[0]}}
+            {{characters[1]}}
+            {{characters[2]}} -->
+            
+        </template>
+        <ol>
+            <li v-for='c in characters'>
+                {{c}}
+            </li>
+        </ol>
+        <ol>
+            <li v-for='(u, index) in users'>
+                {{index}}.{{u.name}} --> {{u.age}}
+            </li>
+        </ol>
+
+        <ol>
+            <li v-for='u in users'>
+                <template v-for='(v, k) in u'>
+                    {{k}} ->{{v}}
+                </template>
+            </li>
+        </ol> 
+    
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
